@@ -48,7 +48,8 @@ The most common ratings are "TV-MA," "TV-14," "TV-PG," and "PG-13.```
 ```sql
 SELECT AVG(duration) AS average_duration
 FROM netflix_titles
-WHERE duration LIKE '% min';
+WHERE duration LIKE '% min';```sql
+
 Explanation: This query calculates the average duration of TV shows that are listed in minutes.
 
 Findings:

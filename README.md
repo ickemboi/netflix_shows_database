@@ -32,7 +32,7 @@ This repository contains the initial setup and observations for analyzing the Ne
 ### Cool Facts
 
 #### Most Common Show Ratings
-`sql
+`
 SELECT rating, COUNT(*) AS count
 FROM netflix_titles
 GROUP BY rating
@@ -45,10 +45,10 @@ Findings:
 The most common ratings are "TV-MA," "TV-14," "TV-PG," and "PG-13.```
 
 #### Average duration of tv shows
-```sql
+`
 SELECT AVG(duration) AS average_duration
 FROM netflix_titles
-WHERE duration LIKE '% min';```sql
+WHERE duration LIKE '% min';`
 
 Explanation: This query calculates the average duration of TV shows that are listed in minutes.
 

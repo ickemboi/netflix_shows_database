@@ -22,7 +22,7 @@ One interesting thing I noticed about the dataset is the diversity of countries 
 
 ## Repository Contents
 - `README.md`: This file.
-- Additional scripts or SQL files (if any) used for the analysis.
+- Additional scripts 
 
 ## Conclusion
 This repository contains the initial setup and observations for analyzing the Netflix Shows dataset. Further analysis can be conducted to explore various trends and insights within the dataset.
@@ -42,7 +42,7 @@ LIMIT 600;`
 Explanation: This query counts the number of shows for each rating and orders them in descending order to find the most common ratings.
 
 Findings:
-The most common ratings are "TV-MA," "TV-14," "TV-PG," and "PG-13.```
+The most common ratings are "TV-MA," "TV-14," "TV-PG," and "PG-13.
 
 #### Average duration of tv shows
 `
@@ -66,14 +66,16 @@ Explanation: This query groups the shows by country and title, counts the number
 
 Findings 
 
-### Question 2: How many shows were added each year?
-`SELECT YEAR(date_added) AS year, COUNT(*) AS shows_added
+### Qusetion 2 Number of Shows Released After 2000
+`
+SELECT COUNT(*) AS shows_after_2000
 FROM netflix_titles
-GROUP BY year
-ORDER BY year;`
-Explanation: This query groups the shows by the year they were added to Netflix, counts the number of shows added each year, and orders the results chronologically.
+WHERE release_year > 2000;`
+
+Explanation: This query counts the number of shows that were released after the year 2000.
 
 Findings:
+The number of shows released after 2000 is 92,
 
 
 

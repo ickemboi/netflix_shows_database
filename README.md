@@ -27,3 +27,15 @@ One interesting thing I noticed about the dataset is the diversity of countries 
 ## Conclusion
 This repository contains the initial setup and observations for analyzing the Netflix Shows dataset. Further analysis can be conducted to explore various trends and insights within the dataset.
 
+## Data Fun
+
+### Cool Facts
+
+#### Most Common Show Ratings
+```sql
+SELECT rating, COUNT(*) AS count
+FROM netflix_shows
+GROUP BY rating
+ORDER BY count DESC
+LIMIT 5;
+![image](https://github.com/ickemboi/netflix_shows_database/assets/74975725/af1b99c9-3a0c-4728-b33e-41982d9fc894)

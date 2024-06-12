@@ -54,3 +54,26 @@ Explanation: This query calculates the average duration of TV shows that are lis
 
 Findings:
 The average duration of TV shows is approximately 100.727272 minutes .
+
+## Ask Away
+### Question 1: What are the popular shows in different countries?
+`SELECT country, title, COUNT(*) AS show_count
+FROM netflix_titles
+GROUP BY country, title
+ORDER BY show_count DESC, country ASC
+LIMIT 10;`
+Explanation: This query groups the shows by country and title, counts the number of shows per title in each country, and orders the results by the count in descending order.
+
+Findings 
+
+### Question 2: How many shows were added each year?
+`SELECT YEAR(date_added) AS year, COUNT(*) AS shows_added
+FROM netflix_titles
+GROUP BY year
+ORDER BY year;`
+Explanation: This query groups the shows by the year they were added to Netflix, counts the number of shows added each year, and orders the results chronologically.
+
+Findings:
+
+
+

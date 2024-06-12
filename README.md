@@ -32,12 +32,12 @@ This repository contains the initial setup and observations for analyzing the Ne
 ### Cool Facts
 
 #### Most Common Show Ratings
-```sql
+`sql
 SELECT rating, COUNT(*) AS count
 FROM netflix_titles
 GROUP BY rating
 ORDER BY count DESC
-LIMIT 600;'''
+LIMIT 600;`
 
 Explanation: This query counts the number of shows for each rating and orders them in descending order to find the most common ratings.
 

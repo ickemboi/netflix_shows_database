@@ -42,7 +42,7 @@ LIMIT 600;'''
 Explanation: This query counts the number of shows for each rating and orders them in descending order to find the most common ratings.
 
 Findings:
-The most common ratings are "TV-MA," "TV-14," "TV-PG," and "PG-13."
+The most common ratings are "TV-MA," "TV-14," "TV-PG," and "PG-13.```
 
 #### Average duration of tv shows
 ```sql

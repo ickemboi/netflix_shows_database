@@ -12,9 +12,9 @@ I chose the Netflix Shows dataset for this analysis. It contains information abo
 One interesting thing I noticed about the dataset is the diversity of countries represented in the Netflix shows. This highlights Netflix's global reach and its efforts to cater to a wide audience with varied content. Additionally, the dataset shows trends in release years and the types of shows added over time.
 
 ## How to Import the Dataset into MySQL Workbench
-Prepare the Database and Table:
+1. Prepare the Database and Table:
 
-Create the database and table if they do not exist using the following SQL script in MySQL Workbench:
+2. Create the database and table if they do not exist using the following SQL script in MySQL Workbench:
 CREATE DATABASE IF NOT EXISTS netflix_db;
 USE netflix_db;
 
@@ -31,36 +31,32 @@ CREATE TABLE IF NOT EXISTS netflix_shows (
     listed_in TEXT,
     description TEXT
 );
-Open MySQL Workbench:
+3. Open MySQL Workbench:
 
 Connect to your MySQL database.
 Open Table Data Import Wizard:
 
 Right-click on the netflix_db database.
 Select Table Data Import Wizard.
-Select the CSV File:
+4. Select the CSV File:
 
 Click Browse to select your CSV file (netflix_shows.csv).
 Click Next.
-Configure Import Settings:
+5. Configure Import Settings:
 
 Ensure the correct table (netflix_shows) is selected.
 Set Field Separator to ,.
 Set Line Endings to \n.
 Check First Row Contains Column Names.
 Click Next.
-Map Columns:
+6. Map Columns:
 
 Ensure CSV columns are correctly mapped to table columns.
 Click Next.
-Import Data:
+7. Import Data:
 
 Review settings and click Next to start the import.
 Wait for the import to complete.
-Verify the Data:
-
-Run a SELECT query or use table view in MySQL Workbench to verify the data
-
 ## Repository Contents
 - `README.md`: This file.
 - Additional scripts 

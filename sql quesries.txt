@@ -1,5 +1,4 @@
-
-##Most Common Show Ratings
+Most Common Show Ratings
 SELECT rating, COUNT(*) AS count 
 FROM netflix_titles GROUP BY rating ORDER 
 BY count DESC LIMIT 600;
@@ -18,3 +17,15 @@ title ORDER BY show_count DESC, country ASC LIMIT 10;
  SELECT COUNT(*) AS shows_after_2000 
 FROM netflix_titles
 WHERE release_year > 2000;
+
+What are the most common release years for Netflix shows?
+SELECT release_year, COUNT(*) AS count
+FROM netflix_titles
+GROUP BY release_year
+ORDER BY count DESC;
+
+What genres are most common in Netflix shows?
+`SELECT listed_in, COUNT(*) AS count
+FROM netflix_titles
+GROUP BY listed_in
+ORDER BY count DESC;`

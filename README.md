@@ -12,13 +12,54 @@ I chose the Netflix Shows dataset for this analysis. It contains information abo
 One interesting thing I noticed about the dataset is the diversity of countries represented in the Netflix shows. This highlights Netflix's global reach and its efforts to cater to a wide audience with varied content. Additionally, the dataset shows trends in release years and the types of shows added over time.
 
 ## How to Import the Dataset into MySQL Workbench
-1. Open MySQL Workbench.
-2. Create a new schema for the project.
-3. Go to `Server -> Data Import`.
-4. Choose `Import from Self-Contained File`.
-5. Select the downloaded dataset file (e.g., `netflix_shows.csv`).
-6. Set your newly created schema as the "Default Target Schema".
-7. Click on `Start Import`.
+Prepare the Database and Table:
+
+Create the database and table if they do not exist using the following SQL script in MySQL Workbench:
+CREATE DATABASE IF NOT EXISTS netflix_db;
+USE netflix_db;
+
+CREATE TABLE IF NOT EXISTS netflix_shows (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255),
+    director VARCHAR(255),
+    cast TEXT,
+    country VARCHAR(100),
+    date_added DATE,
+    release_year INT,
+    rating VARCHAR(10),
+    duration VARCHAR(50),
+    listed_in TEXT,
+    description TEXT
+);
+Open MySQL Workbench:
+
+Connect to your MySQL database.
+Open Table Data Import Wizard:
+
+Right-click on the netflix_db database.
+Select Table Data Import Wizard.
+Select the CSV File:
+
+Click Browse to select your CSV file (netflix_shows.csv).
+Click Next.
+Configure Import Settings:
+
+Ensure the correct table (netflix_shows) is selected.
+Set Field Separator to ,.
+Set Line Endings to \n.
+Check First Row Contains Column Names.
+Click Next.
+Map Columns:
+
+Ensure CSV columns are correctly mapped to table columns.
+Click Next.
+Import Data:
+
+Review settings and click Next to start the import.
+Wait for the import to complete.
+Verify the Data:
+
+Run a SELECT query or use table view in MySQL Workbench to verify the data
 
 ## Repository Contents
 - `README.md`: This file.

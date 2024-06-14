@@ -113,6 +113,23 @@ Explanation: This query counts the number of shows that were released after the 
 
 Findings:
 The number of shows released after 2000 is 92,
+### Qusetion 3 Which country produces the most Netflix shows?
+`SELECT country, COUNT(*) AS count FROM netflix_titles GROUP BY country ORDER BY count DESC;`
 
+Explanation: This query counts the number of shows that were produced by each country.
+
+Findings:
+The most shows were releases in the United States,
+### Qusetion 4 What genres are most common in Netflix shows?
+`SELECT listed_in, COUNT(*) AS count
+FROM netflix_titles
+GROUP BY listed_in
+ORDER BY count DESC;`
+
+### Qusetion 5 What are the most common release years for Netflix shows?
+SELECT release_year, COUNT(*) AS count
+FROM netflix_titles
+GROUP BY release_year
+ORDER BY count DESC;
 
 

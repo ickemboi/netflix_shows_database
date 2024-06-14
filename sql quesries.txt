@@ -3,3 +3,18 @@
 SELECT rating, COUNT(*) AS count 
 FROM netflix_titles GROUP BY rating ORDER 
 BY count DESC LIMIT 600;
+
+Average duration of tv shows
+ SELECT AVG(duration) AS average_duration 
+FROM netflix_titles 
+WHERE duration LIKE '% min';
+
+What are the popular shows in different countries?
+SELECT country, title, COUNT(*) AS show_count 
+FROM netflix_titles GROUP BY country, 
+title ORDER BY show_count DESC, country ASC LIMIT 10;
+
+ Number of Shows Released After 2000
+ SELECT COUNT(*) AS shows_after_2000 
+FROM netflix_titles
+WHERE release_year > 2000;
